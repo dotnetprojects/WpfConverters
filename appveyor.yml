@@ -24,7 +24,7 @@ artifacts:
     name: DotNetProjects.WPF.Converters.dll
   - path: DotNetProjects.WPF.Converters\DotNetProjects.WPF.Converters\bin\Debug\DotNetProjects.WPF.Converters.pdb
     name: DotNetProjects.WPF.Converters.pdb
-  - path: '**\DotNetSiemensPLCToolBoxLibrary*.nupkg'
+  - path: '**\DotNetProjects*.nupkg'
 
 #uncomment to publish to NuGet
 deploy:
