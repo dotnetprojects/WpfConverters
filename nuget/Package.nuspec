@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DotNetProjects.WPF.Converters</id>
+    <version>$version$</version>
+    <authors>DotNetProjects</authors>
+    <owners>DotNetProjects</owners>
+    <licenseUrl>http://www.gnu.org/licenses/MIT.html</licenseUrl>
+    <projectUrl>https://github.com/dotnetprojects/WpfConverters</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Collection of usefull WPF Converters</description>
+    <copyright>Copyright 2015</copyright>
+  </metadata>
+  <files>
+    <file src="..\DotNetProjects.WPF.Converters\DotNetProjects.WPF.Converters\bin\Debug\DotNetProjects.WPF.Converters.dll" target="lib\net45" />
+    <file src="..\DotNetProjects.WPF.Converters\DotNetProjects.WPF.Converters\bin\Debug\DotNetProjects.WPF.Converters.pdb" target="lib\net45" />
+  </files>
+</package>
