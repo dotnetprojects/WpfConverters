@@ -48,18 +48,58 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlternationEqualityConverter.cs" />
     <Compile Include="BoolToValueConverter.cs" />
+    <Compile Include="ByteArrayToImageConverter.cs" />
     <Compile Include="ByteIntArrayConverter.cs" />
+    <Compile Include="ByteToIntConverter.cs" />
+    <Compile Include="CenterConverter.cs" />
+    <Compile Include="CommaPositionConverter.cs" />
     <Compile Include="DatabindingDebugConverter.cs" />
+    <Compile Include="DateTimeToLongTimeStringConverter.cs" />
+    <Compile Include="DateTimeToShortDateStringConverter.cs" />
+    <Compile Include="DiagnosisMessageBackGroundConverter.cs" />
+    <Compile Include="DoubleMultiplicationConverter.cs" />
+    <Compile Include="DoubleRangeConverter.cs" />
+    <Compile Include="DoubleToLog10Converter.cs" />
+    <Compile Include="EnumConverter.cs" />
+    <Compile Include="EnumEqualToVisibilityConverter.cs" />
+    <Compile Include="EnumFlagsConverter.cs" />
+    <Compile Include="EnumToIntConverter.cs" />
+    <Compile Include="EnumToTranslateStringConverter.cs" />
+    <Compile Include="EqualityToBooleanConverter.cs" />
+    <Compile Include="GuidEmptyToCollapsedConverter.cs" />
+    <Compile Include="GuidEmptyToNullConverter.cs" />
+    <Compile Include="I18NPlaceHoldersConverter.cs" />
+    <Compile Include="IEnumerableConverter.cs" />
+    <Compile Include="IEnumerableToCountConverter.cs" />
+    <Compile Include="IntIndexToBrushConverter.cs" />
+    <Compile Include="IntLessOrEqualToVisibilityConverter.cs" />
+    <Compile Include="IntMultiplicationConverter.cs" />
     <Compile Include="IntRangeConverter.cs" />
     <Compile Include="IntToBoolConverter.cs" />
+    <Compile Include="IntToBrushConverter.cs" />
+    <Compile Include="IntToDoubleConverter.cs" />
     <Compile Include="IntToHiddenConverter.cs" />
     <Compile Include="IntToVisibilityConverter.cs" />
+    <Compile Include="InvertConverter.cs" />
     <Compile Include="ItemLineNumbersConverter.cs" />
     <Compile Include="ListIntToVisibilityConverter.cs" />
+    <Compile Include="ListStringConverter.cs" />
+    <Compile Include="LongToDateTimeConverter.cs" />
+    <Compile Include="MonorailInfoDisplayAngleConverter.cs" />
+    <Compile Include="MultiBoolToVisibilityConverter.cs" />
+    <Compile Include="NotNullOrEmptyToVisible.cs" />
     <Compile Include="NullableBoolToValueConverter.cs" />
+    <Compile Include="NullableDecimalToPercentageConverter.cs" />
+    <Compile Include="NullableTimeSpanToMillisecondsConverter.cs" />
+    <Compile Include="NullOrEmptyToCollapsed.cs" />
+    <Compile Include="NullOrEmptyToVisible.cs" />
+    <Compile Include="NullToBrushConverter.cs" />
     <Compile Include="NullToCollapsedConverter.cs" />
     <Compile Include="NullToFalseConverter.cs" />
+    <Compile Include="NullToTrueConverter.cs" />
+    <Compile Include="NullToVisibleConverter.cs" />
     <Compile Include="ObjectToStringConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -74,8 +114,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ResourcePointStateToBrushConverter.cs" />
+    <Compile Include="StringEmptyOrEqualVisibillityConverter.cs" />
+    <Compile Include="StringLastPartConverter.cs" />
+    <Compile Include="StringNullConverter.cs" />
+    <Compile Include="StringStripCharsConverter.cs" />
+    <Compile Include="StringStripFillCharConverter.cs" />
+    <Compile Include="StringToBoolConverter.cs" />
+    <Compile Include="ToEnumConverter.cs" />
     <Compile Include="TreeViewLineConverter.cs" />
+    <Compile Include="TrueToFalseConverter.cs" />
+    <Compile Include="TypeToObjectArrayConverter.cs" />
+    <Compile Include="UtcToLocalTimeConverter.cs" />
     <Compile Include="ValueConverter.cs" />
+    <Compile Include="VisibilityToBoolConverter.cs" />
+    <Compile Include="WidthConverter.cs" />
+    <Compile Include="WithAndHeightToRectangleGeometryConverter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

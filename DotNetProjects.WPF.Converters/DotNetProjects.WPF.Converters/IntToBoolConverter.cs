@@ -4,11 +4,14 @@ namespace DotNetProjects.WPF.Converters
 {
     public class IntToBoolConverter : ValueConverter
     {
+        private static readonly Lazy<ValueConverter> _instance = new Lazy<ValueConverter>(() => new IntToBoolConverter());
+        public static ValueConverter Instance { get { return _instance.Value; } }
+
         public int Value { get; set; }
 
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (value == null || (int)value != Value)
+            if (value == null || (int)value != this.Value)
                 return false;
             return true;
         }
@@ -16,7 +19,7 @@ namespace DotNetProjects.WPF.Converters
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if ((bool)value == true)
-                return Value;
+                return this.Value;
             return null;
         }
     }

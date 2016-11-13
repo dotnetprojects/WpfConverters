@@ -13,18 +13,18 @@ namespace DotNetProjects.WPF.Converters
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if (value == null)
-                return NullValue;
+                return this.NullValue;
             else
-                return ((bool?)value).Value ? TrueValue : FalseValue;
+                return ((bool?)value).Value ? this.TrueValue : this.FalseValue;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if (value != null)
             {
-                if (value.Equals(TrueValue))
+                if (value.Equals(this.TrueValue))
                     return true;
-                else if (value.Equals(FalseValue))
+                else if (value.Equals(this.FalseValue))
                     return false;
             }
             return null;

@@ -1,25 +1,25 @@
 ﻿using System;
-using System.Windows;
 
 namespace DotNetProjects.WPF.Converters
 {
-    public class IntToHiddenConverter : ValueConverter
+    public class ByteToIntConverter : ValueConverter
     {
-        private static readonly Lazy<ValueConverter> _instance = new Lazy<ValueConverter>(() => new IntToHiddenConverter());
+        private static readonly Lazy<ValueConverter> _instance = new Lazy<ValueConverter>(() => new ByteToIntConverter());
         public static ValueConverter Instance { get { return _instance.Value; } }
 
-        public int HiddenValue { get; set; }
 
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (System.Convert.ToInt32(value) == this.HiddenValue)
-                return Visibility.Collapsed;
-            return Visibility.Visible;            
+            if (value == null)
+                return 0;
+
+            return System.Convert.ToInt32(value);
+
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            throw new NotImplementedException();
+            throw new Exception("The method or operation is not implemented.");
         }
     }
 }

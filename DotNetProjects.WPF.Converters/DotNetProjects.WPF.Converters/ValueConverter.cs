@@ -5,11 +5,14 @@ using System.Windows.Markup;
 
 namespace DotNetProjects.WPF.Converters
 {
-    /// <summary>
-    /// Provides a base class for <see cref="IValueConverter"/>s and <see cref="IMultiValueConverter"/>s.
-    /// </summary>
-    public abstract class ValueConverter : MarkupExtension, IValueConverter, IMultiValueConverter
+    public class ValueConverter : MarkupExtension, IValueConverter
+#if !SILVERLIGHT
+        , IMultiValueConverter
+#endif
     {
+        protected ValueConverter()
+        { }
+        
         #region IValueConverter Members
 
         object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -24,6 +27,7 @@ namespace DotNetProjects.WPF.Converters
 
         #endregion
 
+#if !SILVERLIGHT
         #region IMultiValueConverter Members
 
         object IMultiValueConverter.Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
@@ -35,8 +39,8 @@ namespace DotNetProjects.WPF.Converters
         {
             return this.MultiConvertBack(value, targetTypes, parameter, culture);
         }
-
         #endregion
+#endif
 
         #region Virtual Methods
 

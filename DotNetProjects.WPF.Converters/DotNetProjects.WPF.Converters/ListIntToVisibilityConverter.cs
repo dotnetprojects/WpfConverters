@@ -9,7 +9,7 @@ namespace DotNetProjects.WPF.Converters
 
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            var wrt = VisibleValue.Split(',');
+            var wrt = this.VisibleValue.Split(',');
 
             foreach (string s in wrt)
             {

@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Windows;
 
 namespace DotNetProjects.WPF.Converters
 {
-    public class IntToVisibilityConverter : ValueConverter
+    public class TrueToFalseConverter : ValueConverter
     {
-        public int VisibleValue { get; set; }
-
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (System.Convert.ToInt32(value) != this.VisibleValue)
-                return Visibility.Collapsed;
-            return Visibility.Visible;            
+            if (System.Convert.ToBoolean(value) == true)
+                return false;
+
+            return true;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

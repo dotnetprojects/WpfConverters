@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Windows;
 
 namespace DotNetProjects.WPF.Converters
 {
-    public class IntToVisibilityConverter : ValueConverter
-    {
-        public int VisibleValue { get; set; }
-
+    public class MonorailInfoDisplayAngleConverter: ValueConverter
+    {        
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (System.Convert.ToInt32(value) != this.VisibleValue)
-                return Visibility.Collapsed;
-            return Visibility.Visible;            
+            return 0.0 - (double)value;            
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

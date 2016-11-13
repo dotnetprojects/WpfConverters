@@ -1,19 +1,25 @@
 ﻿using System;
-using System.Windows;
+using System.Windows.Media;
 
 namespace DotNetProjects.WPF.Converters
 {
-    public class NullToCollapsedConverter : ValueConverter
+    public class NullToBrushConverter : ValueConverter
     {
-        private static readonly Lazy<ValueConverter> _instance = new Lazy<ValueConverter>(() => new NullToCollapsedConverter());
-        public static ValueConverter Instance { get { return _instance.Value; } }
+        public Brush NullBrush { get; set; }
+        public Brush NotNullBrush { get; set; }
+
+        public NullToBrushConverter()
+        {
+            NullBrush = new SolidColorBrush(Colors.White);
+            NotNullBrush = new SolidColorBrush(Colors.Black);
+        }
 
         public override object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if (value == null)
-                return Visibility.Collapsed;
+                return NullBrush;
             else
-                return Visibility.Visible;
+                return NotNullBrush;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
