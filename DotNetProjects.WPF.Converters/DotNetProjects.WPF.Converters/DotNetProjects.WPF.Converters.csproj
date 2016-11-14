@@ -32,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -48,59 +52,92 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlternationEqualityConverter.cs" />
-    <Compile Include="BoolToValueConverter.cs" />
-    <Compile Include="ByteArrayToImageConverter.cs" />
-    <Compile Include="ByteIntArrayConverter.cs" />
-    <Compile Include="ByteToIntConverter.cs" />
-    <Compile Include="CenterConverter.cs" />
-    <Compile Include="CommaPositionConverter.cs" />
-    <Compile Include="DatabindingDebugConverter.cs" />
-    <Compile Include="DateTimeToLongTimeStringConverter.cs" />
-    <Compile Include="DateTimeToShortDateStringConverter.cs" />
-    <Compile Include="DiagnosisMessageBackGroundConverter.cs" />
-    <Compile Include="DoubleMultiplicationConverter.cs" />
-    <Compile Include="DoubleRangeConverter.cs" />
-    <Compile Include="DoubleToLog10Converter.cs" />
-    <Compile Include="EnumConverter.cs" />
-    <Compile Include="EnumEqualToVisibilityConverter.cs" />
-    <Compile Include="EnumFlagsConverter.cs" />
-    <Compile Include="EnumToIntConverter.cs" />
-    <Compile Include="EnumToTranslateStringConverter.cs" />
-    <Compile Include="EqualityToBooleanConverter.cs" />
-    <Compile Include="GuidEmptyToCollapsedConverter.cs" />
-    <Compile Include="GuidEmptyToNullConverter.cs" />
-    <Compile Include="I18NPlaceHoldersConverter.cs" />
-    <Compile Include="IEnumerableConverter.cs" />
-    <Compile Include="IEnumerableToCountConverter.cs" />
-    <Compile Include="IntIndexToBrushConverter.cs" />
-    <Compile Include="IntLessOrEqualToVisibilityConverter.cs" />
-    <Compile Include="IntMultiplicationConverter.cs" />
-    <Compile Include="IntRangeConverter.cs" />
-    <Compile Include="IntToBoolConverter.cs" />
-    <Compile Include="IntToBrushConverter.cs" />
-    <Compile Include="IntToDoubleConverter.cs" />
-    <Compile Include="IntToHiddenConverter.cs" />
-    <Compile Include="IntToVisibilityConverter.cs" />
-    <Compile Include="InvertConverter.cs" />
-    <Compile Include="ItemLineNumbersConverter.cs" />
-    <Compile Include="ListIntToVisibilityConverter.cs" />
-    <Compile Include="ListStringConverter.cs" />
-    <Compile Include="LongToDateTimeConverter.cs" />
-    <Compile Include="MonorailInfoDisplayAngleConverter.cs" />
-    <Compile Include="MultiBoolToVisibilityConverter.cs" />
-    <Compile Include="NotNullOrEmptyToVisible.cs" />
-    <Compile Include="NullableBoolToValueConverter.cs" />
-    <Compile Include="NullableDecimalToPercentageConverter.cs" />
-    <Compile Include="NullableTimeSpanToMillisecondsConverter.cs" />
-    <Compile Include="NullOrEmptyToCollapsed.cs" />
-    <Compile Include="NullOrEmptyToVisible.cs" />
-    <Compile Include="NullToBrushConverter.cs" />
-    <Compile Include="NullToCollapsedConverter.cs" />
-    <Compile Include="NullToFalseConverter.cs" />
-    <Compile Include="NullToTrueConverter.cs" />
-    <Compile Include="NullToVisibleConverter.cs" />
-    <Compile Include="ObjectToStringConverter.cs" />
+    <Compile Include="Behaviors\CopyPaste\ClipboardSecurityExceptionEventArgs.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\ClipboardCommandBase.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\CommandBase.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\CopyCommand.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\CutCommand.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\DeleteCommand.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\PasteCommand.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\SelectAllCommand.cs" />
+    <Compile Include="Behaviors\CopyPaste\Commands\UndoCommand.cs" />
+    <Compile Include="Behaviors\CopyPaste\ControlStdCommandsBehavior.cs" />
+    <Compile Include="Behaviors\CopyPaste\IClipboardSecurityExceptionNotify.cs" />
+    <Compile Include="Behaviors\CopyPaste\StdCommandActionType.cs" />
+    <Compile Include="Behaviors\DragDropBehavior.cs" />
+    <Compile Include="Behaviors\ExposeFirstVisibleItemBehavior.cs" />
+    <Compile Include="Behaviors\ICloneableBehavior.cs" />
+    <Compile Include="Behaviors\InputBindingsManager.cs" />
+    <Compile Include="Behaviors\NumericTextBoxBehavior.cs" />
+    <Compile Include="Behaviors\StylizedBehaviors.cs" />
+    <Compile Include="Behaviors\TabContent.cs" />
+    <Compile Include="BitmapConversion.cs" />
+    <Compile Include="Converters\AlternationEqualityConverter.cs" />
+    <Compile Include="Converters\BoolToValueConverter.cs" />
+    <Compile Include="Converters\ByteArrayToImageConverter.cs" />
+    <Compile Include="Converters\ByteIntArrayConverter.cs" />
+    <Compile Include="Converters\ByteToIntConverter.cs" />
+    <Compile Include="Converters\CenterConverter.cs" />
+    <Compile Include="Converters\CommaPositionConverter.cs" />
+    <Compile Include="Converters\DatabindingDebugConverter.cs" />
+    <Compile Include="Converters\DateTimeToLongTimeStringConverter.cs" />
+    <Compile Include="Converters\DateTimeToShortDateStringConverter.cs" />
+    <Compile Include="Converters\DiagnosisMessageBackGroundConverter.cs" />
+    <Compile Include="Converters\DoubleMultiplicationConverter.cs" />
+    <Compile Include="Converters\DoubleRangeConverter.cs" />
+    <Compile Include="Converters\DoubleToLog10Converter.cs" />
+    <Compile Include="Converters\EnumConverter.cs" />
+    <Compile Include="Converters\EnumEqualToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumFlagsConverter.cs" />
+    <Compile Include="Converters\EnumToIntConverter.cs" />
+    <Compile Include="Converters\EnumToTranslateStringConverter.cs" />
+    <Compile Include="Converters\EqualityToBooleanConverter.cs" />
+    <Compile Include="Converters\GuidEmptyToCollapsedConverter.cs" />
+    <Compile Include="Converters\GuidEmptyToNullConverter.cs" />
+    <Compile Include="Converters\I18NPlaceHoldersConverter.cs" />
+    <Compile Include="Converters\IEnumerableConverter.cs" />
+    <Compile Include="Converters\IEnumerableToCountConverter.cs" />
+    <Compile Include="Converters\IntIndexToBrushConverter.cs" />
+    <Compile Include="Converters\IntLessOrEqualToVisibilityConverter.cs" />
+    <Compile Include="Converters\IntMultiplicationConverter.cs" />
+    <Compile Include="Converters\IntRangeConverter.cs" />
+    <Compile Include="Converters\IntToBoolConverter.cs" />
+    <Compile Include="Converters\IntToBrushConverter.cs" />
+    <Compile Include="Converters\IntToDoubleConverter.cs" />
+    <Compile Include="Converters\IntToHiddenConverter.cs" />
+    <Compile Include="Converters\IntToVisibilityConverter.cs" />
+    <Compile Include="Converters\InvertConverter.cs" />
+    <Compile Include="Converters\ItemLineNumbersConverter.cs" />
+    <Compile Include="Converters\ListIntToVisibilityConverter.cs" />
+    <Compile Include="Converters\ListStringConverter.cs" />
+    <Compile Include="Converters\LongToDateTimeConverter.cs" />
+    <Compile Include="Converters\MonorailInfoDisplayAngleConverter.cs" />
+    <Compile Include="Converters\MultiBoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\NotNullOrEmptyToVisible.cs" />
+    <Compile Include="Converters\NullableBoolToValueConverter.cs" />
+    <Compile Include="Converters\NullableDecimalToPercentageConverter.cs" />
+    <Compile Include="Converters\NullableTimeSpanToMillisecondsConverter.cs" />
+    <Compile Include="Converters\NullOrEmptyToCollapsed.cs" />
+    <Compile Include="Converters\NullOrEmptyToVisible.cs" />
+    <Compile Include="Converters\NullToBrushConverter.cs" />
+    <Compile Include="Converters\NullToCollapsedConverter.cs" />
+    <Compile Include="Converters\NullToFalseConverter.cs" />
+    <Compile Include="Converters\NullToTrueConverter.cs" />
+    <Compile Include="Converters\NullToVisibleConverter.cs" />
+    <Compile Include="Converters\ObjectToStringConverter.cs" />
+    <Compile Include="ExtensionMethods\ListBoxExtension.cs" />
+    <Compile Include="ExtensionMethods\TreeViewExtensions.cs" />
+    <Compile Include="GhostCursor.cs" />
+    <Compile Include="Panels\AnimatedWrapPanel.cs" />
+    <Compile Include="Panels\CirclePanel.cs" />
+    <Compile Include="Panels\ColumnedPanel.cs" />
+    <Compile Include="Panels\FanPanel.cs" />
+    <Compile Include="Panels\FishEyePanel.cs" />
+    <Compile Include="Panels\LoopPanel.cs" />
+    <Compile Include="Panels\RadialPanel.cs" />
+    <Compile Include="Panels\SliderPanel.cs" />
+    <Compile Include="Panels\VirtualizingTilePanel.cs" />
+    <Compile Include="Panels\VirtualizingWrapPanel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -114,22 +151,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ResourcePointStateToBrushConverter.cs" />
-    <Compile Include="StringEmptyOrEqualVisibillityConverter.cs" />
-    <Compile Include="StringLastPartConverter.cs" />
-    <Compile Include="StringNullConverter.cs" />
-    <Compile Include="StringStripCharsConverter.cs" />
-    <Compile Include="StringStripFillCharConverter.cs" />
-    <Compile Include="StringToBoolConverter.cs" />
-    <Compile Include="ToEnumConverter.cs" />
-    <Compile Include="TreeViewLineConverter.cs" />
-    <Compile Include="TrueToFalseConverter.cs" />
-    <Compile Include="TypeToObjectArrayConverter.cs" />
-    <Compile Include="UtcToLocalTimeConverter.cs" />
-    <Compile Include="ValueConverter.cs" />
-    <Compile Include="VisibilityToBoolConverter.cs" />
-    <Compile Include="WidthConverter.cs" />
-    <Compile Include="WithAndHeightToRectangleGeometryConverter.cs" />
+    <Compile Include="Converters\ResourcePointStateToBrushConverter.cs" />
+    <Compile Include="Converters\StringEmptyOrEqualVisibillityConverter.cs" />
+    <Compile Include="Converters\StringLastPartConverter.cs" />
+    <Compile Include="Converters\StringNullConverter.cs" />
+    <Compile Include="Converters\StringStripCharsConverter.cs" />
+    <Compile Include="Converters\StringStripFillCharConverter.cs" />
+    <Compile Include="Converters\StringToBoolConverter.cs" />
+    <Compile Include="Converters\ToEnumConverter.cs" />
+    <Compile Include="Converters\TreeViewLineConverter.cs" />
+    <Compile Include="Converters\TrueToFalseConverter.cs" />
+    <Compile Include="Converters\TypeToObjectArrayConverter.cs" />
+    <Compile Include="Converters\UtcToLocalTimeConverter.cs" />
+    <Compile Include="Converters\ValueConverter.cs" />
+    <Compile Include="Converters\VisibilityToBoolConverter.cs" />
+    <Compile Include="Converters\WidthConverter.cs" />
+    <Compile Include="Converters\WithAndHeightToRectangleGeometryConverter.cs" />
+    <Compile Include="ResolveElementName.cs" />
+    <Compile Include="UIHelpers.cs" />
+    <Compile Include="WinFormsImage.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -139,6 +179,14 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Behaviors\CopyPaste\Images\CopyHS.png" />
+    <Resource Include="Behaviors\CopyPaste\Images\CutHS.png" />
+    <Resource Include="Behaviors\CopyPaste\Images\DeleteHS.png" />
+    <Resource Include="Behaviors\CopyPaste\Images\Edit_UndoHS.png" />
+    <Resource Include="Behaviors\CopyPaste\Images\PasteHS.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

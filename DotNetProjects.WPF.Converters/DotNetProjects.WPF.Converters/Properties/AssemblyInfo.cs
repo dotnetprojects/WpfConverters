@@ -3,6 +3,7 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Markup;
 
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
@@ -53,3 +54,10 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: XmlnsDefinition("urn:mlog-sharedclasses-ns", "DotNetProjects.WPF.Converters")]
+[assembly: XmlnsDefinition("urn:mlog-sharedclasses-ns", "DotNetProjects.WPF.Converters.Behaviors")]
+[assembly: XmlnsDefinition("urn:mlog-sharedclasses-ns", "DotNetProjects.WPF.Converters.Converters")]
+[assembly: XmlnsDefinition("urn:mlog-sharedclasses-ns", "DotNetProjects.WPF.Converters.Panels")]
+[assembly: XmlnsPrefix("urn:mlog-sharedclasses-ns", "shared")]
+
