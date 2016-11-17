@@ -72,6 +72,7 @@
     <Compile Include="Behaviors\StylizedBehaviors.cs" />
     <Compile Include="Behaviors\TabContent.cs" />
     <Compile Include="BitmapConversion.cs" />
+    <Compile Include="Collections\ObservableDictionary.cs" />
     <Compile Include="Converters\AlternationEqualityConverter.cs" />
     <Compile Include="Converters\BoolToValueConverter.cs" />
     <Compile Include="Converters\ByteArrayToImageConverter.cs" />
